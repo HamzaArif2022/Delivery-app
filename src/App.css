@@ -1,0 +1,137 @@
+
+#root {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #FFC244aa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #009E81aa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* Responsive layout adjustments */
+@media (max-width: 767px) {
+  main {
+    padding-bottom: 80px; /* Space for bottom navigation */
+  }
+  
+  h1 {
+    font-size: 1.5rem;
+  }
+  
+  .container {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    max-width: 1200px; /* Limit max width on very large screens */
+  }
+}
+
+/* Fix scrolling issues */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+}
+
+/* Make sure all flex containers respect parent width */
+.flex {
+  max-width: 100%;
+}
+
+/* Improve responsive images */
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Better touch targets for mobile */
+button, 
+a, 
+[role="button"] {
+  touch-action: manipulation;
+  min-height: 44px; /* Improve accessibility - Apple HIG recommendation */
+}
+
+/* Carousel adjustments for mobile */
+@media (max-width: 767px) {
+  .embla__viewport {
+    overflow: visible;
+  }
+  
+  .embla__container {
+    display: flex;
+  }
+
+  /* Increase touch targets in mobile navigation */
+  .bottom-nav-link {
+    padding: 8px;
+  }
+
+  /* Ensure modals work well on small screens */
+  .dialog-content {
+    width: 95%;
+    max-height: 80vh;
+    margin: 0 auto;
+  }
+}
+
+/* Better spacing for desktop */
+@media (min-width: 1024px) {
+  .container {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+  
+  .grid-cols-desktop {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+}
+
+/* Fix for Safari flexbox issues */
+.flex-fix {
+  flex-shrink: 0;
+}
